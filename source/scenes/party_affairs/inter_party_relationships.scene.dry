@@ -20,7 +20,7 @@ For the entireity of the 20s we have been deprieved of any role in goverance due
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: cs_relation += 2*(1 - dissent); austromarxist_dissent += 5; workers_spado -= 2
+on-arrival: cs_relation += 3*(1 - dissent); austromarxist_dissent += 5; workers_spado -= 2
 
 Finding anyone within the Christian Socials willing to speak with us is a herculean task. The most accommodating groups are the Christian trade groups, and even they are cold towards us, not to mention their insignificance in the Christian Social Party. 
 
@@ -28,6 +28,6 @@ We also tone down our agitation for working class catholics to leave the church,
 
 @sdapo_alone
 
-Building coalitions with parties so fundamentally opposed to democracy is a pointless endeavour 
+We have already pleaded with them to see sense before. it failed then, and it'd fail now.
 
 - @return: Continue...
