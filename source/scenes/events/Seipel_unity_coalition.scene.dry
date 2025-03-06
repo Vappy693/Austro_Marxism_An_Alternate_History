@@ -1,7 +1,7 @@
 title: National unity coalition
 subtitle: Chancellor Ignaz Seipel offers us position in government!
 new-page: true
-on-arrival: National_unity_coalition_seen = 1
+on-arrival: Seipel_unity_coalition_seen = 1
 tags: event
 view-if: year = 1931 and month = 6
 max-visits: 1
