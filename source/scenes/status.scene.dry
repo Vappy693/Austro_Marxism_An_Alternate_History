@@ -90,7 +90,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Pleaceholder blah blah blah.">Austro-Marxist</span>!} strength: [+ austromarxist_strength : strength +], dissent: [+ austromarxist_dissent : dissent +]
+{!<span class="tooltip-text" title="Austro Marxism takes a position similar to the Center Marxist middle road between reform and revolution, though a very dynamic force in practice, most notably for its deviation from internationalism with the “personal principle”>Austro-Marxist</span>!} strength: [+ austromarxist_strength : strength +], dissent: [+ austromarxist_dissent : dissent +]
 
 {!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
