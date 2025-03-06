@@ -20,8 +20,8 @@ Otto Bauer doesn't want to take the position of vice chancellor offered to him, 
 - @root: Absolutely not 
 
 @National_unity
-Choose_if: cs_relation >= 50 and reformist_strength >= austromarxist_strength and Resources >= 1
-unavailable-subtitle: [? if reformist_strength < austromarxist_strength: Reformists do not have enough influence within the party.?] [? if cs_relation < 50: Even reformists do not trust the Christian Social's intentions.?] [? if resources < 1: Otto Bauer refuses to join.?]
+Choose_if: cs_relation >= 40 and reformist_strength >= austromarxist_strength and Resources >= 1
+unavailable-subtitle: [? if reformist_strength < austromarxist_strength: Reformists do not have enough influence within the party.?] [? if cs_relation < 40: Even reformists do not trust the Christian Social's intentions.?] [? if resources < 1: Otto Bauer refuses to join.?]
 Subtitle: -1 resources
 on-arrival: spado_in_government = 1; in_grand_coalition = 1; austromarxist_dissent += 20; workers_spado -= 10; catholics_cs -= 10; reformists_strength += 10; resources -= 1; leverage = 20 if leverage >= 20
 
