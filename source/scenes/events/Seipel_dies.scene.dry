@@ -1,0 +1,35 @@
+title: Seipel dies
+subtitle: With him goes our coalition?
+view-if: year = 1932 and month = 8 and in_grand_coalition
+max-visits: 1
+tags: event
+new-page: true
+
+= Seipel Dies
+
+The chancellor of the Grand Coalition, Ignaz Seipel, had died. Though a man always influenced by authoritarianism and who acted towards us with spite, he is also the only person within the Christian Socials who ever even tried to form a coalition with us.
+
+Without his leadership to blindly follow, most Christians Socials see no reason to continue a coalition with us. They refuse to consider continuing the coalition unless one of theirs is chosen, a difficult task when most of their suggestions actively oppose democracy.
+
+- @Dollfuss: Appoint Engelbert Dollfuss, the lower Austrian "peasant democrat" as a moderate compromise choice
+- @Buresch: Appoint the lower Austrian governor, Karl Buresch, as a compromise.
+- @Joeover: That's it for the coalition then, isn't it?
+
+@Dollfus
+on-arrival: nationalism -= 1
+subtitle: Despite the optimistic perspective of some of our party, his opportunism is concerning...
+
+We have appoints Engelbert Dollfus as chancellor. The Christian Socials reluctently continue their participation in government.
+
+
+@Buresch
+on-arrival: nationalism -= 1
+subtitle: Despite his connection to the Heimwehr, we maintain mostly cordial relations with Buresch
+
+We have appoints Engelbert Dollfus as chancellor. The Christian Socials reluctently continue their participation in government.
+
+
+@Joeover
+on-arrival: nationalism -= 1
+
+We have found no choice for chancellor within the Christian Socials amicable to us. We have no choice but to end the coalition.
