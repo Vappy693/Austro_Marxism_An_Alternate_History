@@ -29,7 +29,7 @@ if (Q.ideology && Q.ideology != "left") {
 go-to: changed if changed = 1
 on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; z_relation -= 3; dvp_relation -= 5; nationalization_support += 1; kpd_relation += 3
 
-The radical left of the party are critical of the Austro Marxists stated commitment to revolution while refusing to advance it.
+The radical left of the party are critical of the Austro Marxists stated commitment to revolution while refusing to advance it. They demand a more active approach to protect the working class.
 
 @centrist
 on-arrival: {!
