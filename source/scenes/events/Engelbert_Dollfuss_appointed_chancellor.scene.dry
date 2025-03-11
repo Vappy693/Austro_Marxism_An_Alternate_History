@@ -19,7 +19,7 @@ In a suprising move, he has actually reached out to us first to form a coalition
 @Dollfuss_cooperate
 on arrival: strife += 1
 
-The negotiations go over well enough, with the exception of the peculiar request from Dollfuss to also be minister of foreign affairs and agriculture. The grand coalition is formed.
+The negotiations go over well enough, with the exception of the peculiar request from Dollfuss to also be minister of foreign affairs and agriculture on top of being chancellor. The grand coalition is formed.
 
 @New_elections
 on-arrival: strife += 1
