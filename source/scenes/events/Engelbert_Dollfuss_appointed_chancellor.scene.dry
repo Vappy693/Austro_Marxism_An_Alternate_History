@@ -1,0 +1,27 @@
+title: Engelbert Dollfuss appointed chancellor
+new-page: true
+subtitle: A obscure figure from lower Austria rises to chancellor
+tags: event
+view-if: year == 1932 and month == 5 and not in_grand_coalition
+max-visits: 1
+
+= Nazi March in Altona
+
+#Source that Dollfuss first reached out the SDAPO for coalition is the biography of Dollfuss by Gordon Brook Shepherd 
+
+Following the end of the Buresch government, president Wilhelm Miklas has appointed Engelbert Dollfuss. Dollfuss is most notable to us as a passionate advocate of agrarian consumer cooperatives, one of the few common grounds to be found between right and left.
+
+In a suprising move, he has actually reached out to us first to form a coalition. There is some limited enthusiasm for cooperation with the "peasant democrat" within the party, however following the recent local elections in which we and the DNSAP were the only real winners, there is little appetite for anything other then new elections.
+
+- @Dollfuss_cooperate: We shall accept cooperation
+- @New_elections: We will accept nothing but new elections
+
+@Dollfuss_cooperate
+on arrival: strife += 1
+
+The negotiations go over well enough, with the exception of the peculiar request from Dollfuss to also be minister of foreign affairs and agriculture. The grand coalition is formed.
+
+@New_elections
+on-arrival: strife += 1
+
+Even if the government is lead by a supposed moderate, it doesn't change the fact that the people demand a say.
