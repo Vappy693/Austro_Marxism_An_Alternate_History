@@ -22,7 +22,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: cs_relation += 3*(1 - dissent); austromarxist_dissent += 5; workers_spado -= 2
 
-WIP
+In the lower Austrian state government led by Karl Buresch, we have been able to cooperate with the csp and maintain cordial relations with the governor. Extending this too the rest of the nation proves hard.
 
 We also tone down our agitation for working class catholics to leave the church, which hopefully will cause their leadership to see us as less of a threat.
 
