@@ -23,7 +23,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: cs_relation += 3*(1 - dissent); austromarxist_dissent += 5; workers_spado -= 2
 
-In the lower Austrian government we are in a coalition with the Christian Social's and maintain a mostly cordial relation there, but outside of that there are few within the Christian Socials willing to listen to our appeals.
+In the lower Austrian government we are in a coalition with the Christian Social's and maintain a mostly cordial relation there, but outside of that there are few within the Christian Socials willing to listen to our appeals. We reach out to Kunschak and his christian trade union faction, but even they aren't particularly accomodating, nevermind their lack of influence in the party.
 
 We also tone down our agitation for working class catholics to leave the church, which hopefully will cause their leadership to see us as less of a threat.
 
