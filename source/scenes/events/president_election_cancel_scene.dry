@@ -1,0 +1,31 @@
+title: Christian Socials propose presidential election be 
+new-page: true
+subtitle: They claim to hold an election would be too expensive in the middle of a depression.
+view-if: year = 1934 and month = 9
+max-visits: 1
+on-arrival: president_election_cancel = 1
+tags: event
+
+= Uprising in Austria
+
+# The English wikipedia page saying this was scheduled for 1934 seems to be wrong, their source just doesn't say that as well as basically everything I've read agreeing it was supposed to be in 1931.
+# Seipel and Renner were planning to run in this election before they were called off
+
+
+According to amendments made to the constitution in 1929, we now have a election scheduled for October 1931. However, the Christian Socials claim that holding an election would be too expensive in the midst of the depression, and ask the election be Given to parliament instead.
+
+- @give_parliament
+- @give_people
+
+@give_parliament
+title: We shall let parliament decide
+on-arrival: pro_republic +=1
+
+The parliament has decided to re-elect Wilhelm Miklas of the Christian Socials
+
+@give_people
+title: The people shall decide.
+unavailable_text: The party leadership warns of "Caesaristic experiments"
+on-arrival: pro_republic +=1
+
+We have decided to let the people have their voice.
