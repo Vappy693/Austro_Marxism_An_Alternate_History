@@ -575,7 +575,6 @@ For more information on the politics and government of the German Republic, see 
 - @1928_main: Begin (normal difficulty)
 - @1928_hard: Begin (hard difficulty)
 - @1928_historical: Begin (historical mode)
-- @settings: Settings.
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
@@ -604,17 +603,6 @@ Q.budget = 2;
 this.state.disableSaves = true;
 !}
 go-to: 1928_main
-
-@settings
-subtitle: Enable or disable various features.
-
-- @Re-Write history: Prevent the usage of terms such as "dictatorship of the proletariat" in the Linz Program
-- @menu: Back.
-
-@Re-Write
-view-if: Linz_Program_altered = 0
-on-arrival: Linz_Program_altered = 1
-go-to: menu
 
 @1928_main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3
