@@ -3,7 +3,7 @@ new-page: true
 subtitle: They claim to hold an election would be too expensive in the middle of a depression.
 view-if: year = 1931 and month = 9
 max-visits: 1
-on-arrival: president_election_cancel = 1
+on-arrival: president_election_cancel_seen = 1
 tags: event
 
 = Uprising in Austria
