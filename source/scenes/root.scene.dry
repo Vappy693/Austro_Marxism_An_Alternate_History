@@ -180,7 +180,7 @@ Q.workers_cs = 5;
 Q.workers_gdvp = 0;
 Q.workers_lb = 0;
 Q.workers_dnsap = 5;
-Q.workers_hb = 0;
+Q.workers_dnsap = 0;
 Q.workers_other = 10;
 
 Q.old_middle_sdapo = 5;
