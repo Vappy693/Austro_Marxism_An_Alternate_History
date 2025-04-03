@@ -608,15 +608,13 @@ go-to: 1928_main
 @settings
 subtitle: Enable or disable various features.
 
-- @Re-Write: Prevent the usage of the term "dictatorship of the proletariat" in the Linz Program of 1926
+- @Re-Write: Prevent the usage of terms such as "dictatorship of the proletariat" in the Linz Program
 - @menu: Back.
 
 @Re-Write
 view-if: Linz_Program_altered = 0
 on-arrival: Linz_Program_altered = 1
 go-to: menu
-
-WIP
 
 @menu
 
