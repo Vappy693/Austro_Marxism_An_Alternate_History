@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1931;
+Q.year = 1928;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -46,19 +46,27 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['austromarxistleft', 'austromarxist', 'reformist'];
+Q.factions = ['left', 'austromarxist', 'labor', 'reformist', 'neorevisionist'];
 // should this be normalized to 100%?
-Q.austromarxistleft_strength = 10;
-Q.austromarxistleft_dissent = 10;
-Q.austromarxist_strength = 55;
+Q.left_strength = 15;
+Q.left_dissent = 20;
+Q.austromarxist_strength = 30;
 Q.austromarxist_dissent = 0;
-Q.reformist_strength = 40;
+Q.labor_strength = 25;
+Q.labor_dissent = 5;
+Q.reformist_strength = 25;
 Q.reformist_dissent = 5;
+Q.neorevisionist_strength = 5;
+Q.neorevisionist_dissent = 10;
 
 // secret events...
+Q.unions_independent = 0;
 Q.centrists_resign = 0;
 Q.left_split = 0;
 Q.reformists_resigned = 0;
+
+// have we discovered neorevisionism?
+Q.neorevisionism = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
@@ -66,15 +74,34 @@ Q.crisis_urgency = 0;
 Q.nazi_urgency = 0;
 // radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
+// Support for the WTB plan and proto-Keynesian works creation plans in general
+Q.wtb_support = 0;
 // Support for democratic reform within the SPD relative to 1928
 Q.democratization = 0;
+// Support for a communist coalition relative to 1928
+Q.communist_coalition = 0;
+// economic_plan: have we adopted *any* economic plan?
+// 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
+Q.economic_plan = 0;
+// have we officially adopted the WTB plan?
+Q.wtb_adopted = 0;
+// have we formed the iron front?
+Q.iron_front_formed = 0;
+// people's party support
+Q.peoples_party_support = 0;
+// support for nationalizations
+Q.nationalization_support = 0;
+Q.nationalization_adopted = 0;
+// moderate economic plan
+Q.moderate_plan_support = 0;
+Q.moderate_plan_adopted = 0;
 
 // organizations
 
 // inter-party relations
-Q.cs_relation = 15;
-// GDVP*,LB,HB, and DNSAP are invariably hostile
-Q.GDVP_relation = 5;
+Q.cs_relation = 10;
+// GDVP,LB,HB, and DNSAP are invariably hostile
+Q.GDVP_relation = 0;
 Q.LB_relation = 0;
 Q.HB_relation = 0;
 Q.DNSAP_relation = 0;
@@ -88,34 +115,46 @@ Q.Vienna_government = "SPD";
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rs_strength = 2000;
-Q.rs_militancy = 0.01;
+Q.rb_strength = 2000;
+Q.rb_militancy = 0.01;
 Q.women_in_rb = 0;
-Q.rs_banned = 0;
-Q.hb_strength = 500;
-Q.hb_militancy = 0.5;
-Q.hb_banned = 0;
+Q.rb_banned = 0;
+Q.sh_strength = 500;
+Q.sh_militancy = 0.5;
+Q.sh_banned = 0;
+Q.sh_banned_prussia = 0;
 Q.sa_strength = 80;
 Q.sa_militancy = 0.5;
 Q.sa_banned = 0;
+Q.sa_banned_prussia = 0;
+Q.rfb_strength = 130;
+Q.rfb_militancy = 0.5;
+Q.rfb_banned = 0;
+Q.rfb_banned_prussia = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
 
+Q.prussian_police_strength = 90;
+Q.prussian_police_militancy = 1;
+Q.prussian_police_loyalty = 0.5;
+
 // strength includes actual military and de facto reserves?
-Q.Bundesheer_strength = 100;
-Q.Bundesheer_militancy = 5;
-Q.Bundesheer_loyalty = 0.2;
+Q.reichswehr_strength = 100;
+Q.reichswehr_militancy = 5;
+Q.reichswehr_loyalty = 0.2;
 
 // The state of the country
 
 // popular opinion
 // national ideology - on a binary scale
+// nationalism vs internationalism or pacifism or non-nationalism
+Q.nationalism = 60;
 // socialism vs capitalism
 Q.socialism = 40;
 // pro-republic vs anti-republic
-Q.pro_republic = 45;
+Q.pro_republic = 59;
 
 Q.emergency_rule = 0;
 
@@ -173,62 +212,65 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['sdapo', 'kpo', 'csp', 'gdvp', 'lb', 'hb', 'dnsap', 'other'];
+Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+
+// TODO: add 'sapd' later on
+Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_sdapo = 60;
-Q.workers_kpo = 20;
-Q.workers_csp = 5;
-Q.workers_gdvp = 0;
-Q.workers_lb = 0;
-Q.workers_dnsap = 5;
+Q.workers_spd = 60;
+Q.workers_kpd = 20;
+Q.workers_z = 5;
+Q.workers_ddp = 0;
+Q.workers_dvp = 0;
+Q.workers_dnvp = 5;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
-Q.old_middle_sdapo = 5;
-Q.old_middle_kpo = 0;
-Q.old_middle_csp = 5;
-Q.old_middle_lb = 10;
-Q.old_middle_hb = 25;
-Q.old_middle_gdvp = 25;
-Q.old_middle_dnsap = 10;
+Q.old_middle_spd = 5;
+Q.old_middle_kpd = 0;
+Q.old_middle_z = 5;
+Q.old_middle_ddp= 10;
+Q.old_middle_dvp = 25;
+Q.old_middle_dnvp = 25;
+Q.old_middle_nsdap = 10;
 Q.old_middle_other = 10;
 
-Q.new_middle_sdapo = 5;
-Q.new_middle_kpo = 1;
-Q.new_middle_csp = 10;
-Q.new_middle_gdvp= 25;
-Q.new_middle_hb = 25;
-Q.new_middle_lb = 10;
-Q.new_middle_dnsap = 5;
+Q.new_middle_spd = 5;
+Q.new_middle_kpd = 1;
+Q.new_middle_z = 10;
+Q.new_middle_ddp= 25;
+Q.new_middle_dvp = 25;
+Q.new_middle_dnvp = 10;
+Q.new_middle_nsdap = 5;
 Q.new_middle_other = 15;
 
-Q.rural_sdapo = 10;
-Q.rural_kpo = 0;
-Q.rural_csp = 5;
-Q.rural_gdvp= 5;
-Q.rural_hb = 15;
-Q.rural_lb = 45;
-Q.rural_dnsap = 5;
+Q.rural_spd = 10;
+Q.rural_kpd = 0;
+Q.rural_z = 5;
+Q.rural_ddp= 5;
+Q.rural_dvp = 15;
+Q.rural_dnvp = 45;
+Q.rural_nsdap = 5;
 Q.rural_other = 10;
 
-Q.unemployed_sdapo = 25;
-Q.unemployed_kpo = 55;
-Q.unemployed_csp = 1;
-Q.unemployed_gdvp = 0;
-Q.unemployed_lb = 0;
-Q.unemployed_hb = 5;
-Q.unemployed_dnsap = 15;
+Q.unemployed_spd = 25;
+Q.unemployed_kpd = 55;
+Q.unemployed_z = 1;
+Q.unemployed_ddp = 0;
+Q.unemployed_dvp = 0;
+Q.unemployed_dnvp = 5;
+Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
 
-Q.catholics_sdapo = 15;
-Q.catholics_kpo = 2;
-Q.catholics_csp = 50;
-Q.catholics_hb = 0;
-Q.catholics_lb = 5;
-Q.catholics_gdvp = 5;
-Q.catholics_dnsap = 0;
+Q.catholics_spd = 15;
+Q.catholics_kpd = 2;
+Q.catholics_z = 50;
+Q.catholics_ddp = 0;
+Q.catholics_dvp = 5;
+Q.catholics_dnvp = 5;
+Q.catholics_nsdap = 0;
 Q.catholics_other = 12;
 
 
@@ -238,13 +280,13 @@ Q.catholics_other = 12;
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.sdapo_r = 26;
-Q.kpo_r = 9;
-Q.csp_r = 17;
-Q.gdvp_r = 6;
-Q.lb_r = 10;
-Q.hb_r = 20;
-Q.dnsap_r = 3;
+Q.spd_r = 26;
+Q.kpd_r = 9;
+Q.z_r = 17;
+Q.ddp_r = 6;
+Q.dvp_r = 10;
+Q.dnvp_r = 20;
+Q.nsdap_r = 3;
 Q.other_r = 9;
 
 // diff from prev
