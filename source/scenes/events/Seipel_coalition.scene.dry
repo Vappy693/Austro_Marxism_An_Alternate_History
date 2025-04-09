@@ -17,7 +17,7 @@ The Left and Center Marxist wings of the party are vehemently against participat
 - @Seipel_coalition: Accept the offer
 - @root: Absolutely not 
 
-@Seipel_coalition
+@Seipel_coalition_accept
 Choose_if: cs_relation >= 40 and reformist_strength >= austromarxist_strength
 unavailable-subtitle: [? if reformist_strength < austromarxist_strength: Reformists do not have enough influence within the party.?] [? if cs_relation < 40: Even reformists do not trust Seipel's intentions.?]
 Subtitle: -1 resources
