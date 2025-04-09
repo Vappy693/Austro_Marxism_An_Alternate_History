@@ -1,0 +1,28 @@
+title: A coalition with the Christian Socials?
+subtitle: Ignaz Seipel offers us position in government
+new-page: true
+on-arrival: Seipel_coalition_seen = 1
+tags: event
+view-if: year = 1931 and month = 6
+max-visits: 1
+
+# TODO: this should happen regardless of the current state of the government...
+
+= Seipel coalition
+
+Following the straining of relations Christian Socials and the Greater Germans, Ignaz Seipel has offered a coalition with us. This proposal has come as a significant surprise to us, given that Seipel belongs to the authoritarian right wing of the Christian Social Party. 
+
+The Left and Center Marxist wings of the party are vehemently against participating in a coalition with bourgeoisie parties, suspecting that this is merely a attempt to shove the blame for the capitalists crisis onto us. However, this purposal is also met with skepticism from reformists, saying a moderate and concilatory leader is needed for a coalition to take place.
+
+- @Seipel_coalition: Accept the offer
+- @root: Absolutely not 
+
+@Seipel_coalition
+Choose_if: cs_relation >= 40 and reformist_strength >= austromarxist_strength and Resources >= 1
+unavailable-subtitle: [? if reformist_strength < austromarxist_strength: Reformists do not have enough influence within the party.?] [? if cs_relation < 40: Even reformists do not trust Seipel's intentions.?]
+Subtitle: -1 resources
+on-arrival: spado_in_government = 1; in_grand_coalition = 1; austromarxist_dissent += 20; workers_spado -= 10; catholics_cs -= 10; reformists_strength += 10; resources -= 1; leverage = 20 if leverage >= 20
+
+We accept the offer for a national unity government. When every other party refuses to entertain joining a government with us, it perhaps predictably becomes a mere grand coaltion. Our and the Christian's participation is unpopular with large segments of both our parties and will likely be punished should another election happen soon.
+
+- @election_1928.ministries: Let's hope it was not for nothing.
