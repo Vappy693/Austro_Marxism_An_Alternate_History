@@ -26,7 +26,7 @@ The parliament has decided to re-elect Wilhelm Miklas of the Christian Socials
 
 @give_people
 Choose_if: president_election_cancel_seen = 0
-title: The people shall decide.
+title: The people should decide.
 unavailable_subtitle: The party leadership warns of "Caesaristic experiments"
 on-arrival: pro_republic +=1
 
