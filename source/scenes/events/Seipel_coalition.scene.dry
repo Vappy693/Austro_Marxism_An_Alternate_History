@@ -23,6 +23,6 @@ unavailable-subtitle: [? if reformist_strength < austromarxist_strength: Reformi
 Subtitle: -1 resources
 on-arrival: spado_in_government = 1; in_grand_coalition = 1; austromarxist_dissent += 20; workers_spado -= 10; catholics_cs -= 10; reformists_strength += 10; resources -= 1; leverage = 20 if leverage >= 20
 
-We accept the offer. Both of our parties are likely to be punished for governing together come next election.
+We accept the offer. Both of our parties are likely to be punished for governing together come next election. We can only hope this doesn't lead to the same outcome as the last grand coalition.
 
 - @election_1928.ministries: Let's hope it was not for nothing.
