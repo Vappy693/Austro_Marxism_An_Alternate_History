@@ -13,10 +13,10 @@ The chancellor of the Grand Coalition, Ignaz Seipel, had died. Despite his anti 
 
 Without his leadership to blindly follow, the party begins intense infighting over whether to continue this coalition. The marginal left wing of the party around Leopold Kunschak and the christian trade unions have been convinced of our reconcilation and advocate maintaining the coalition to hold off the fascist and anti democratic threats. The right wing of the Christian Socials, being anti democratic and semi fascist themselves, naturally demand an end to the coalition. The peasant democratic and center wing of the party is hesistant.
 
-The Christian Socials refuse to continue this coalition unless one of their own is chosen as chancellor. Coincidentally, few of them are willing to take the position under the current coalition.
+The Christian Socials demand one of their own is chosen as chancellor. Coincidentally, few of them are willing to take the position under the current coalition.
 
 - @Dollfuss: Appoint Engelbert Dollfuss, the lower Austrian "peasant democrat" as a moderate compromise choice
-- @Buresch: Appoint the lower Austrian governor, Karl Buresch.
+- @Hainisch: Can we convince them to appoint the non-partisan liberal Michael Hainisch.
 - @Joeover: That's it for the coalition then, isn't it?
 
 @Dollfuss
@@ -26,11 +26,11 @@ subtitle: Despite the optimistic perspective of some of our party, his opportuni
 We have appointed Engelbert Dollfus as chancellor. The Christian Socials reluctently continue their participation in government.
 
 
-@Buresch
+@Hainisch
 on-arrival: nationalism -= 1
-subtitle: Despite his connection to the Heimwehr, we maintain mostly cordial relations with the lower Austrian governor.
+subtitle: The popular former president of the republic. A Fabian and former member of the left-liberal Civic Democratic Party.
 
-We have appointed Karl Buresch as chancellor. The Christian Socials reluctently continue their participation in government.
+We have appointed Micheal Hainisch as chancellor. Though unhappy, they still hold respect for the former president. The Christian Socials reluctently continue their participation in government.
 
 
 @Joeover
