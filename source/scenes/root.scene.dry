@@ -50,18 +50,16 @@ Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
 // should this be normalized to 100%?
 Q.left_strength = 15;
 Q.left_dissent = 20;
-Q.center_strength = 30;
-Q.center_dissent = 0;
+Q.austromarxist_strength = 30;
+Q.austromarxist_dissent = 0;
 Q.labor_strength = 25;
 Q.labor_dissent = 5;
 Q.reformist_strength = 25;
 Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
 
 // secret events...
 Q.unions_independent = 0;
-Q.centrists_resign = 0;
+Q.austromarxist_resign = 0;
 Q.left_split = 0;
 Q.reformists_resigned = 0;
 
@@ -101,60 +99,47 @@ Q.moderate_plan_adopted = 0;
 // inter-party relations
 Q.cs_relation = 10;
 // GDVP,LB,HB, and DNSAP are invariably hostile
-Q.GDVP_relation = 0;
-Q.LB_relation = 0;
-Q.HB_relation = 0;
-Q.DNSAP_relation = 0;
+Q.gdvp_relation = 0;
+Q.lb_relation = 0;
+Q.hb_relation = 0;
+Q.dnsap_relation = 0;
 
 
-// Does the SPADO lead in Vienna?
-Q.SPADO_prussia = 1;
+// Does the SDAPO lead in Vienna?
+Q.sdapo_vienna = 1;
 // Options: SDAPO
-Q.Vienna_government = "SPD";
+Q.vienna_government = "sdapo";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
-Q.rb_strength = 2000;
-Q.rb_militancy = 0.01;
-Q.women_in_rb = 0;
-Q.rb_banned = 0;
-Q.sh_strength = 500;
-Q.sh_militancy = 0.5;
-Q.sh_banned = 0;
-Q.sh_banned_prussia = 0;
-Q.sa_strength = 80;
-Q.sa_militancy = 0.5;
-Q.sa_banned = 0;
-Q.sa_banned_prussia = 0;
-Q.rfb_strength = 130;
-Q.rfb_militancy = 0.5;
-Q.rfb_banned = 0;
-Q.rfb_banned_prussia = 0;
+// Republikanischer Schutzbund, Heimwehr, SA, rotfrontkämpferbund
+Q.rs_strength = 80;
+Q.rs_militancy = 0.3;
+Q.women_in_rs = 0;
+Q.rs_banned = 0;
+Q.hw_strength = 150;
+Q.hw_militancy = 0.25;
+Q.hw_banned = 0;
+Q.hw_banned_prussia = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
 
-Q.prussian_police_strength = 90;
-Q.prussian_police_militancy = 1;
-Q.prussian_police_loyalty = 0.5;
-
 // strength includes actual military and de facto reserves?
-Q.reichswehr_strength = 100;
+Q.reichswehr_strength = 80;
 Q.reichswehr_militancy = 5;
-Q.reichswehr_loyalty = 0.2;
+Q.reichswehr_loyalty = 0.8;
 
 // The state of the country
 
 // popular opinion
-// national ideology - on a binary scale
-// nationalism vs internationalism or pacifism or non-nationalism
-Q.nationalism = 60;
+// national ideology - on a binary scale 
+Q.polarization = 80;
 // socialism vs capitalism
-Q.socialism = 40;
+Q.socialism = 42;
 // pro-republic vs anti-republic
-Q.pro_republic = 59;
+Q.pro_republic = 53;
 
 Q.emergency_rule = 0;
 
@@ -179,17 +164,16 @@ Q.capital_strike_progress = 0;
 Q.budget = 4;
 
 // Proportion of different social groups
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
-Q.workers = 48; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
+// loosely based on this but it was mostly vibes tbh: https://www.google.com/books/edition/Corporatism_and_Fascism/dzIlDwAAQBAJ?hl=en&gbpv=1&dq=otto+ender&pg=PA153&printsec=frontcover page 157
+Q.workers = 41; // industry and trade
+Q.old_middle = 9; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
-Q.catholics = 30;
+Q.new_middle = 10; // "new mittelstand"
+Q.rural = 40; // agriculture and forestry employment... but many of those are proletarians so...
+// source: https://www.google.com/books/edition/Contemporary_Austrian_Politics/1U2wDwAAQBAJ?hl=en&gbpv=1&dq=unemployment+rate+in+the+austrian+first+republic&pg=PA1963&printsec=frontcover table 1.4
+Q.unemployed = 13.3;
 
-// unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
+// unemployment: 1930-1931 - 13.3, 1930, 1932-1937 - 32.9 (same source as above
 
 // income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
 Q.income = 1600;
@@ -215,7 +199,7 @@ Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'cath
 Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 // TODO: add 'sapd' later on
-Q.sapd_formed = 0;
+Q.sap_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
