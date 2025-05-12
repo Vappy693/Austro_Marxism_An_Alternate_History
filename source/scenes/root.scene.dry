@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Austro Marxism: An Alternate History
 
 @start_menu_2
 
@@ -21,8 +21,8 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.year = 1930;
+Q.month = 8;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -552,13 +552,13 @@ For more information on the politics and government of the German Republic, see 
 
 @1930_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rs_strength = 120; cs_relation = 15; budget = 5;
-go-to: 1928_main
+go-to: 1930_main
 
-@1928_hard
+@1930_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 60; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; austromarxist_dissent = 25; cs_relation = 0; budget = 3;
-go-to: 1928_main
+go-to: 1930_main
 
-@1928_historical
+@1930_historical
 subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
 on-arrival: {!
 Q.difficulty = 2;
