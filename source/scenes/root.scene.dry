@@ -22,7 +22,7 @@ Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
 Q.year = 1930;
-Q.month = 8;
+Q.month = 9;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -289,15 +289,15 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
-// starting chancellor: Wilhelm Miklas
-Q.chancellor = "Miklas";
-Q.chancellor_party = 'CS';
+Q.president = "Mixlas";
+// starting chancellor: Vaugoin
+Q.chancellor = "Vaugoin";
+Q.chancellor_party = 'CSP';
 Q.sdapo_in_government = 0;
 Q.cs_in_government = 1;
 Q.gdvp_in_government = 0;
-Q.lb_in_government = 1;
-Q.hb_in_government = 1;
+Q.lb_in_government = 0;
+Q.hb_in_government = 0;
 Q.dnsap_in_government = 0;
 
 Q.in_right_coalition = 0;
@@ -330,24 +330,25 @@ Q.sdapo_toleration = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
+// starting with the Federal Government Vaugoin cabinet https://de.wikipedia.org/wiki/Bundesregierung_Vaugoin
 // is the agricultural ministry useful at all?
-Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'lb';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'lb';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+Q.foreign_minister = 'Seipel';
+Q.foreign_minister_party = 'CSP';
+Q.internal_minister = 'Starhemberg';
+Q.internal_minister_party = 'I';
+Q.justice_minister = 'Hueber';
+Q.justice_minister_party = 'I';
+Q.education_minister = 'Czermak';
+Q.education_minister_party = 'CSP';
+Q.army_minister = 'Vaugoin';
+Q.army_minister_party = 'CSP';
+Q.trade_and_transport_minister = 'Heinl';
+Q.trade_and_transport_minister_party = 'CSP';
+Q.finance_minister = 'Juch';
+Q.finance_minister_party = 'I';
+Q.agriculture_minister = 'Thaler';
+Q.social_administration_minister = 'Schmitz';
+Q.social_administration_minister_party = 'CSP';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
