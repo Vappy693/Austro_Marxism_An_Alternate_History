@@ -2,7 +2,7 @@ title: Otto Bauer
 is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/otto_bauer_0.jpg
-view-if: wels_advisor = 1
+view-if: bauer_advisor = 1
 new-page: true
 
 = Otto Bauer
