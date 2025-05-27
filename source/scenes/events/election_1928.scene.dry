@@ -103,8 +103,6 @@ Q.far_right_coalition = Q.hb_r + Q.dnsap_r;
 Q.catholic_far_right_coalition = Q.cs_r + Q.dnsap_r + Q.hb_r;
 Q.left_coalition = Q.spd_r + Q.sap_r;
 
-}
-
 Q.leverage = Q.sdapo_r;
 
 Q.grand_coalition_failed = 0;
