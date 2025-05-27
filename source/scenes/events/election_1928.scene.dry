@@ -97,10 +97,10 @@ if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
 
 // coalitions
 Q.grand_coalition = Q.sdapo_r + Q.cs_r;
-Q.catholic_german_coalition = Q.cs_r + Q.gdvp_r + Q.lb_r;
+Q.german_catholic_coalition = Q.cs_r + Q.gdvp_r + Q.lb_r;
 Q.right_coalition = Q.cs_r + Q.hb_r + Q.lb_r;
-Q.far_right_coalition = Q.hb_r + Q.dnsap_r;
-Q.catholic_far_right_coalition = Q.cs_r + Q.dnsap_r + Q.hb_r;
+Q.far_right_coalition = Q.gdvp_r + Q.dnsap_r;
+Q.catholic_far_right_coalition = Q.cs_r + Q.dnsap_r ;
 Q.left_coalition = Q.spd_r + Q.sap_r;
 
 Q.leverage = Q.sdapo_r;
@@ -263,19 +263,15 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
+Grand Coalition(SDAPO + CSP): [+ grand_coalition +]%
 
-Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
+German Catholic Coalition (CSP + GDVP + LB): [+ german_catholic_coalition +]%
 
-Bourgeois Coalition (Z + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
-
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
+Right Coalition (CSP + HB + LB): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
-
-There are some potential coalition arrangements.
+There are some potential coalition arrangements. Unfortunately, most of them do not include us.
 
 @coalition_menu
 
