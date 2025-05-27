@@ -223,7 +223,7 @@ Q.new_middle_sdapo = 25;
 Q.new_middle_cs = 10;
 Q.new_middle_gdvp = 25;
 Q.new_middle_lb = 0;
-Q.new_middle_hb = 10;
+Q.new_middle_hb = 20;
 Q.new_middle_dnsap = 5;
 Q.new_middle_other = 15;
 
