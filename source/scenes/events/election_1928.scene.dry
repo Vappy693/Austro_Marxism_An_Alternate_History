@@ -167,8 +167,7 @@ Q.election_records.push(election_result);
 !}
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
-data = [
-];
+data = 
 if (Q.sap_formed && Q.sap_r) {
     data.push({
             "id": "sap",
