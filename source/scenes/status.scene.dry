@@ -25,7 +25,7 @@ SPD position: [? if sdapo_toleration : toleration ?][? if sdapo_in_government : 
 
 [? if sdapo_in_government and not in_sdapo_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if sdapo_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if sdapo_in_government and (in_left_front): SAP coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -38,20 +38,18 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 Reichstag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ sdapo_r +]%
+{!<span class="tooltip-text" title="Social Democratic Workers Party of Austria">SDAPO</span>!}: [+ sdapo_r +]%
 [? if sap_formed and sap_r > 0: SAP: [+ sap_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Center Party + Bavarian People's Party">CS + BVP</span>!}: [+ cs_r +]%
+{!<span class="tooltip-text" title="Christian Social Party">CS</span>!}: [+ cs_r +]%
 # 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">DDP</span>!}: [+ gdvp_r +]%
+{!<span class="tooltip-text" title="Greater German People's Party">GDVP</span>!}: [+ gdvp_r +]%
 # 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ lb_r +]%
+{!<span class="tooltip-text" title="Landbund">DVP</span>!}: [+ lb_r +]%
 # 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="German National People's Party">HB</span>!}: [+ hb_r +]%
+{!<span class="tooltip-text" title="Heimatblock">HB</span>!}: [+ hb_r +]%
 # 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">DNSAP</span>!}: [+ dnsap_r +]%
+{!<span class="tooltip-text" title="German National-Socialist Worker's Party (Nazis)">DNSAP</span>!}: [+ dnsap_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
@@ -86,52 +84,34 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="German National Socialist Workers Party (Nazis)">DNSAP</span>!}: [+ dnsap_relation : relationships +]
 
-= Internal Factions of the SPD
+= Internal Factions of the SDAPO
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left agitates against the passiveness of the Austro Marxists idea of a defensive dictatorship of the proletariat and demand immediate prepations for revolution.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The leading Austro Marxists around Otto Bauer are at the center of the party, following the compromise established at the Linz program they believe that revolution and a dictatorship of the proletariat should be implemented but only in response to a bourgeois attempt to end democracy. They are highly skeptical of coalitions with the bourgeois parties">Austro Marxist</span>!} strength: [+ austromarxist_strength : strength +], dissent: [+ austromarxist_dissent : dissent +]
 
 {!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
-
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+{!<span class="tooltip-text" title="The right wing of the SDAPO around Karl Renner believe in the possibility of reconcilation with the Christian Socials, and seek to expand the welfare state and defend democracy through participation in government.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
 
 @paramilitaries
 on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+if (Q.rs_strength) {
+    Q.rs_strength_2 = Q.rs_strength.toFixed(1);
 }
-if (Q.rfb_strength) {
-    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
-}
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
-}
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
+if (Q.hw_strength) {
+    Q.hw_strength_2 = Q.hw_strength.toFixed(1);
 }
 !}
 
 = Paramilitaries
 
-{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Republikanischer Schutzbund (Republican Protection League) is a popular organization for defending democracy, entirely affiliated with the SDAPO.">Republikanischer Schutzbund</span>!} Strength: [+ rs_strength_2 +] thousand
 
-Reichsbanner Militarization: [+ rb_militancy : militancy +]
+Republikanischer Schutzbund Militarization: [+ rs_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
-
-RFB Militarization: [+ rfb_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the HB.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
-
-Stahlhelm Militarization: [+ sh_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
-
-SA Militarization: [+ sa_militancy : militancy +]
+{!<span class="tooltip-text" title="The Heimwehr is a right-wing organization of war veterans, the political arm of which being Heimat Block.">Heimwehr</span>!} Strength: [+ hw_strength_2 +] thousand
 
 = Official military/paramilitaries
 
