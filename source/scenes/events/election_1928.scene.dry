@@ -169,7 +169,7 @@ on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
 data = [
 ];
-if (Q.sapd_formed && Q.sapd_r) {
+if (Q.sap_formed && Q.sap_r) {
     data.push({
             "id": "sap",
             "legend": "SAP",
@@ -188,7 +188,7 @@ data = data.concat([
         "id": "csp",
         "legend": "CSP",
         "name": "CSP",
-        "seats": Math.round(Q.cs_r*5),
+        "seats": Math.round(Q.csp_r*5),
     },
     {
         "id": "gdvp",
